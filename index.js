@@ -8,7 +8,7 @@ async function getCoordinates(){
     //need to get teh latitude and longitude of the current position
     return [latlong.coords.latitude, latlong.coords.longitude]
 }
-console.log(getCoordinates())
+//console.log(getCoordinates())
 
 const myMap = L.map('map', {
     center: [48.868672, 2.342130],
