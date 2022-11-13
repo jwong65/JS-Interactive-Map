@@ -5,7 +5,7 @@ async function getCoordinates(){
     latlong=await new Promise ((resolve, reject)=>{
         navigator.geolocation.getCurrentPosition(resolve, reject);
     })
-    //need to get teh latitude and longitude of the current position
+    //need to get the latitude and longitude of the current position
     return [latlong.coords.latitude, latlong.coords.longitude]
 }
 console.log(getCoordinates())
@@ -28,5 +28,8 @@ window.onload = async()=>{
 // function selectOption(){
 //     const myMap = 
 // }
+//Need an event listener that will change the map for clicking on the button
+document.getElementById('submitbtn').addEventListener("click", {
 
+})
 //var map= L.map('map').setView(getCoordinates(), 13);
