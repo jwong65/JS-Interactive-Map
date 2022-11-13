@@ -4,21 +4,22 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Interactive Map</title>
-    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.2/dist/leaflet.css"
-    integrity="sha256-sA+zWATbFveLLNqWO2gtiw3HL/lh1giY/Inf1BJ0z14="
-    crossorigin=""/>
+    <title>Interactive Map</title> 
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.2/dist/leaflet.css" integrity="sha256-sA+zWATbFveLLNqWO2gtiw3HL/lh1giY/Inf1BJ0z14=" crossorigin=""/>
+    <script src="https://unpkg.com/leaflet@1.9.2/dist/leaflet.js" integrity="sha256-o9N1jGDZrf5tS+Ft4gbIK7mYMipq9lqpVJ91xHSyKhg=" crossorigin=""></script>
+
     <script type="text/javascript" src="./index.js"></script>
     <script src ="credential.js"></script>
-    <script src="https://unpkg.com/leaflet@1.9.2/dist/leaflet.js"
-    integrity="sha256-o9N1jGDZrf5tS+Ft4gbIK7mYMipq9lqpVJ91xHSyKhg="
-    crossorigin=""></script>
     <style>
         #map{
             height: 600px;
             background-color: #ccc;
             width: 100%;
         }
+        .leaflet-popup-content-wrapper {
+            width: 100%;
+        }
+
 
     </style>
 </head>
@@ -30,9 +31,10 @@
         </select>
         <button>Submit</button>
     </form>
-    
+
     <div id="map">
         <!--This is the map div which will need functionality-->
     </div>
+
 </body>
 </html>

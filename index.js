@@ -1,5 +1,5 @@
 //console.log(clientId)
-getCoordinates()
+//getCoordinates()
 //Need to get the user's current location
 async function getCoordinates(){
     latlong=await new Promise ((resolve, reject)=>{
@@ -10,4 +10,13 @@ async function getCoordinates(){
 }
 console.log(getCoordinates())
 
-var map= L.map('map').setView(getCoordinates(), 13);
+const myMap = L.map('map', {
+    center: [48.868672, 2.342130],
+    zoom: 12,
+});
+L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
+    minZoom: '15',
+}).addTo(myMap)
+
+//var map= L.map('map').setView(getCoordinates(), 13);
