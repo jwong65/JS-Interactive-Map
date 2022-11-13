@@ -23,5 +23,10 @@ window.onload = async()=>{
 
     var marker = L.marker(cooridnates).addTo(myMap);
 }
+//Going to need to use .setView to help change the options
+
+// function selectOption(){
+//     const myMap = 
+// }
 
 //var map= L.map('map').setView(getCoordinates(), 13);
