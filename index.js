@@ -1,3 +1,4 @@
+
 //console.log(clientId)
 getCoordinates()
 //Need to get the user's current location
@@ -33,3 +34,30 @@ document.getElementById('submitbtn').addEventListener("click", {
 
 })
 //var map= L.map('map').setView(getCoordinates(), 13);
+async function setView(){
+    let cooridnates = await getCoordinates()
+    if (document.getElementById('location')=='somewhere'){
+        myMap.setView(cooridnates)
+    }
+}
+
+//Fetch from foursquare
+async function getBusinesses(){
+const options = {
+    method: 'GET',
+    headers: {
+      accept: 'application/json',
+      Authorization: 'fsq3Ky6PFiqAIcEAKANyLYcLrvbmPuVWiSxxOwHrP8'
+    }
+  };
+
+  fetch('https://api.foursquare.com/v3/places/search', options)
+    .then(response => response.json())
+    .then(response => console.log(response))
+    .catch(err => console.error(err));
+}
+getBusinesses()
+//creating an array of businesses
+const businesses =[]
+
+placeholder = L.layerGroup(businesses)
